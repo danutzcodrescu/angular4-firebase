@@ -11,7 +11,7 @@ export class RootComponent implements OnInit {
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit() {
-      this.projectsService.findAllProjects().subscribe(arr => {
+      this.projectsService.allProjects().subscribe(arr => {
           this.projects = arr;
           console.log(arr);
       });

@@ -10,9 +10,11 @@ export class ProjectsService {
 
 	constructor(private db: AngularFireDatabase) { }
 
-	findAllProjects(): Observable<Project[]> {
-		return this.db.list('projects')
-			.map(projects=> <Project[]> projects)
-			.take(1);
+	allProjects() {
+		return this.db.list('/projects');
+	}
+
+	findOne(key) {
+		return this.db.object('/projects/' + key);
 	}
 }

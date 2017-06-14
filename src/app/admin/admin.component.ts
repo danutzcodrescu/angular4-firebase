@@ -1,6 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import * as firebase from 'firebase/app';
-import { FirebaseApp } from 'angularfire2';
+import { ProjectsService } from './../shared/model/projects.service';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Router } from "@angular/router";
 
 @Component({
 	selector: 'app-admin',
@@ -8,22 +9,38 @@ import { FirebaseApp } from 'angularfire2';
 	styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-	private firebase: any;
-	constructor( @Inject(FirebaseApp) firebase: firebase.app.App) {
-		this.firebase = firebase;
-	}
+	
+	private list: string;
+	private edit = false;
+
+	constructor( private afAuth: AngularFireAuth, private router: Router) { }
 
 	ngOnInit() {
 	}
 
-	upload(event) {
-		event.preventDefault();
-		const file: File = event.target.file.files[0];
-		const storage = firebase.storage().ref();
-		const ref = storage.child(`images-manu/${file.name}`);
-		ref.put(file).then(function (snapshot) {
-			console.log(snapshot);
-		});
+	clicked(type: string, param: string) {
+		if (type === "edit" && this.edit === false) {
+			this.edit = true;
+		}
+		if (type === "list" && this.edit === true) {
+			this.edit = false;
+		}
+		this.list = param;
+	}
+
+	logout() {
+		this.afAuth.auth.signOut();
+		this.router.navigate(['/login']);
+	}
+
+
+	projects(event) {
+		if (event === "new") {
+			this.edit = true;
+		} else {
+			this.edit = true;
+			this.list = 'project*' + event;
+		}
 	}
 
 }

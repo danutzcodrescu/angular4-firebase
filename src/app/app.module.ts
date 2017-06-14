@@ -23,6 +23,10 @@ import { LoginComponent } from './login/login.component';
 import { AdminService } from 'app/shared/auth/admin.service';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import 'firebase/storage';
+import { AllProjectsComponent } from './all-projects/all-projects.component';
+import { NewProjectComponent } from './new-project/new-project.component';
+import { EditProjectComponent } from './edit-project/edit-project.component';
+import { ImgComponent } from './img/img.component';
 
 
 @NgModule({
@@ -37,7 +41,11 @@ import 'firebase/storage';
 		ContactComponent,
 		ProjectComponent,
 		AdminComponent,
-		LoginComponent
+		LoginComponent,
+		AllProjectsComponent,
+		NewProjectComponent,
+		EditProjectComponent,
+		ImgComponent
 	],
 	imports: [
 		BrowserModule,

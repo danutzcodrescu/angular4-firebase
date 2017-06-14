@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let project of projects | async ">
+		<div>{{project.client}} <button (click)='clicked(project.$key)'>Edit</button></div>
+    </li>
+</ul>
+<button (click)="clicked('new')">Creeaza proiect nou</button>
