@@ -1,4 +1,4 @@
-import { Project } from './projects';
+// import { Project } from './projects';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';

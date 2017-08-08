@@ -1,0 +1,14 @@
+<div class="my-container background-opacity">
+	<div>
+		<h4 class="h2 h3_under text-center">Our latest projects</h4>
+		<div class="small-controls">
+			<div>
+				<span id="prev_small" (click)="prev()">&#9664;</span>
+				<span id="next_small" (click)="next()">&#9654;</span>
+			</div>
+		</div>
+		<div class="project-images current">
+			<div class="background-slider" *ngFor="let slide of slides" [ngStyle]="{'background-image': 'url(' + slide + ')'}"></div>
+		</div>
+	</div>
+</div>

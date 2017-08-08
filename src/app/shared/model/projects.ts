@@ -1,5 +1,5 @@
 export interface Project {
-    client: String;
+	client: String;
 	start: Date;
 	end: Date;
 	location: String;

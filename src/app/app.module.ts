@@ -27,6 +27,7 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { NewProjectComponent } from './new-project/new-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ImgComponent } from './img/img.component';
+import { SliderProjectsComponent } from './slider-projects/slider-projects.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ImgComponent } from './img/img.component';
 		AllProjectsComponent,
 		NewProjectComponent,
 		EditProjectComponent,
-		ImgComponent
+		ImgComponent,
+		SliderProjectsComponent
 	],
 	imports: [
 		BrowserModule,

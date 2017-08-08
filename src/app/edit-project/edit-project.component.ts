@@ -56,7 +56,7 @@ export class EditProjectComponent implements OnInit {
   }
 
   updateProject(event) {
-	  event.preventDefault();
+	  	event.preventDefault();
 		const formValue = this.form.value;
 		const obj: any = {};
 		obj.client = formValue.client;
@@ -71,11 +71,12 @@ export class EditProjectComponent implements OnInit {
 			const storage = firebase.storage().ref();
 			const ref = storage.child(`images-manu/${img.name}`);
 			promises.push(ref.put(img));
+			files[i].value = '';
 		}
 
 		Promise.all(promises).then(imgs => {
 			obj.files = this.project.files.concat(imgs.map(img=>{
-				return img.a.downloadURLs[0];
+				return img.downloadURL;
 			}));
 				// obj.files.push(ref.getDownloadURL());
 			this.projectService.findOne(this.id).update(obj);
