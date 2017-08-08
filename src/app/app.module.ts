@@ -28,6 +28,7 @@ import { NewProjectComponent } from './new-project/new-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ImgComponent } from './img/img.component';
 import { SliderProjectsComponent } from './slider-projects/slider-projects.component';
+// import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -52,12 +53,13 @@ import { SliderProjectsComponent } from './slider-projects/slider-projects.compo
 	imports: [
 		BrowserModule,
 		FormsModule,
-        ReactiveFormsModule,
+		ReactiveFormsModule,
 		HttpModule,
 		RouterModule.forRoot(routerConfig),
-        AngularFireModule.initializeApp(firebaseConfig),
-        AngularFireDatabaseModule,
-        AngularFireAuthModule
+		AngularFireModule.initializeApp(firebaseConfig),
+		AngularFireDatabaseModule,
+		AngularFireAuthModule,
+		// TranslateModule.forRoot()
 	],
 	providers: [ProjectsService, AdminService],
 	bootstrap: [AppComponent]

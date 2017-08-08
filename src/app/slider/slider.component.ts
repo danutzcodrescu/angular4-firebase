@@ -18,6 +18,7 @@ export class SliderComponent implements OnInit, OnDestroy {
 	private timer$;
 	private next$ = new Subject();
 	private prev$ = new Subject();
+	private time$ = Observable.interval(3500);
 	private counter = 0;
 
 	constructor() { }
@@ -26,25 +27,27 @@ export class SliderComponent implements OnInit, OnDestroy {
 		this.timer$ = Observable.merge(
 			this.next$.mapTo('next'),
 			this.prev$.mapTo('prev'),
-			Observable.interval(3500).mapTo('time')
+			this.time$.mapTo('time')
 		);
 		this.timer$.subscribe(time => {
-			switch(time) {
-				case 'time' :
-				case 'next' :
+			switch (time) {
+				case 'time':
+				case 'next':
 					this.counter++;
-					if (this.counter === this.images.length) this.counter=0;
+					if (this.counter === this.images.length) {this.counter = 0}
 					break;
-				case 'prev' :
+				case 'prev':
 					this.counter--;
-					if (this.counter === -1) this.counter = this.images.length - 1;
-					break;	
+					if (this.counter === -1) {this.counter = this.images.length - 1}
+					break;
 			}
 			this.selected = this.images[this.counter];
 		});
 	}
 
-    ngOnDestroy() {
-        this.timer$.unsubscribe();
-    }
+	ngOnDestroy() {
+		// this.time$.unsubscribe();
+		this.next$.unsubscribe();
+		this.prev$.unsubscribe();
+	}
 }

@@ -5,32 +5,32 @@ import * as firebase from 'firebase/app';
 import { FirebaseApp } from 'angularfire2';
 
 @Component({
-  selector: 'app-new-project',
-  templateUrl: './new-project.component.html',
-  styleUrls: ['./new-project.component.scss'],
-  providers: [ProjectsService]
+	selector: 'app-new-project',
+	templateUrl: './new-project.component.html',
+	styleUrls: ['./new-project.component.scss'],
+	providers: [ProjectsService]
 })
 export class NewProjectComponent implements OnInit {
 
-  private firebase: any;
-  public form: FormGroup;
+	private firebase: any;
+	public form: FormGroup;
 
-  constructor( @Inject(FirebaseApp) firebase: firebase.app.App, private fb: FormBuilder, private projects: ProjectsService) {
-	  this.firebase = firebase;
-	  this.form = this.fb.group({
+	constructor( @Inject(FirebaseApp) firebase: firebase.app.App, private fb: FormBuilder, private projects: ProjectsService) {
+		this.firebase = firebase;
+		this.form = this.fb.group({
 			client: ['', Validators.required],
 			location: [''],
 			start: ['', Validators.required],
 			end: [''],
 			description: [''],
-			files: [''] 
-	});
-   }
+			files: ['']
+		});
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
-  createProject(event) {
+	createProject(event) {
 		event.preventDefault();
 		const formValue = this.form.value;
 		const obj: any = {};
@@ -51,13 +51,13 @@ export class NewProjectComponent implements OnInit {
 		}
 
 		Promise.all(promises).then(imgs => {
-			obj.files = imgs.map(img=>{
+			obj.files = imgs.map(img => {
 				return img.a.downloadURLs[0];
 			});
-				// obj.files.push(ref.getDownloadURL());
+			// obj.files.push(ref.getDownloadURL());
 			projects.push(obj);
 		})
-		.catch(err => console.log(err));
+			.catch(err => console.log(err));
 	}
 
 }
