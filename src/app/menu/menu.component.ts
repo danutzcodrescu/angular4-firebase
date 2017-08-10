@@ -1,5 +1,6 @@
 import { Router, NavigationEnd } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from "app/shared/translate/translate.service";
 
 @Component({
 	selector: 'app-menu',
@@ -10,16 +11,17 @@ export class MenuComponent implements OnInit {
 
 	lang = <String>"fr";
 
-	constructor(private router: Router) { }
+	constructor(private router: Router, private translate: TranslateService) {}
 
 	ngOnInit() {
 		this.lang = this.router.url.includes('/en') ? "/en" : "/fr";
+		this.translate.use(this.lang);
 		this.router.events.subscribe(event => {
 			if (event instanceof NavigationEnd) {
-				if (event.url.includes('/en/')) {
-					this.lang = "/en";
+				if (event.url.includes('/en')) {
+					this.lang = "en";
 				} else {
-					this.lang = "/fr";
+					this.lang = "fr";
 				}
 			}
 		});

@@ -1,6 +1,8 @@
-{"PAGES" :{
-    "home": "accueuil",
-    "result": "notre-projects",
-    "contact": "contactez-nous"
-    }
+{
+	"MENU": {
+		"HOME": "accueuil",
+		"RESULTS": "notre projects",
+		"CONTACT": "contactez nous"
+	}
 }
+

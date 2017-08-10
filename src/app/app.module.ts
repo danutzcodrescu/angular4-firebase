@@ -1,9 +1,11 @@
+import { SendEmailService } from './shared/send-email/send-email.service';
+import { TranslateService } from './shared/translate/translate.service';
 import { ProjectsService } from './shared/model/projects.service';
 import { routerConfig } from './../assets/routes/routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule, Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -28,7 +30,8 @@ import { NewProjectComponent } from './new-project/new-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ImgComponent } from './img/img.component';
 import { SliderProjectsComponent } from './slider-projects/slider-projects.component';
-// import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from './shared/translate/translate.pipe';
+import { SentanceCasePipe } from './shared/sentance-case.pipe';
 
 
 @NgModule({
@@ -48,7 +51,9 @@ import { SliderProjectsComponent } from './slider-projects/slider-projects.compo
 		NewProjectComponent,
 		EditProjectComponent,
 		ImgComponent,
-		SliderProjectsComponent
+		SliderProjectsComponent,
+		TranslatePipe,
+		SentanceCasePipe
 	],
 	imports: [
 		BrowserModule,
@@ -58,10 +63,9 @@ import { SliderProjectsComponent } from './slider-projects/slider-projects.compo
 		RouterModule.forRoot(routerConfig),
 		AngularFireModule.initializeApp(firebaseConfig),
 		AngularFireDatabaseModule,
-		AngularFireAuthModule,
-		// TranslateModule.forRoot()
+		AngularFireAuthModule
 	],
-	providers: [ProjectsService, AdminService],
+	providers: [ProjectsService, AdminService, TranslateService, SendEmailService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

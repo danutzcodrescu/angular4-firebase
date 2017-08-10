@@ -10,9 +10,9 @@
         
         <nav>
             <ul>       
-                <li><a [routerLink]="[lang]">Home</a></li>
-                <li><a [routerLink]="[lang+'/projects']">Projects</a></li>
-                <li><a [routerLink]="[lang+'/contact']">Contact</a></li>
+                <li><a [routerLink]="['/' + lang]">{{'MENU.HOME' | translate | sentanceCase }}</a></li>
+                <li><a [routerLink]="['/' + lang + '/projects']">{{'MENU.RESULTS' | translate | sentanceCase }}</a></li>
+                <li><a [routerLink]="['/' + lang+'/contact']">{{'MENU.CONTACT' | translate | sentanceCase }}</a></li>
             </ul>
         </nav>
         <a class="contact" href="tel:0032495304278">

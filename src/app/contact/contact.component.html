@@ -23,22 +23,22 @@
                 </a>
                 <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
             </div>
-            <form>
+            <form novalidate #form="ngForm" (ngSubmit)="sendEmail(form.value)">
                 <div>
-                    <input type='text' name='fname' placeholder="First Name *" />     
-                    <input type='text' name='lname' placeholder="Last Name" />
+                    <input type='text' name='fname' placeholder="First Name *" ngModel />     
+                    <input type='text' name='lname' placeholder="Last Name" ngModel />
                 </div>
                 <div >
-                    <input type='email' name='email' placeholder="Email *" style="width: 100%"/>     
+                    <input type='email' name='email' placeholder="Email *" style="width: 100%" ngModel required />     
                 </div>
                 <div>
-                    <textarea name='mess' rows='10' cols='10' placeholder="Message *">
+                    <textarea name='mess' rows='10' cols='10' placeholder="Message *" required ngModel>
                     
                     </textarea>
                 </div>
                 <div>
                     <p>All fields with * are obligatory</p>
-                    <button type="submit">Send Message!</button>
+                    <button type="submit" [disabled]="!form.valid">Send Message!</button>
                 </div>
             </form>      
         </div>

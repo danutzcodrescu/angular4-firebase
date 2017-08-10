@@ -6,6 +6,7 @@
     margin-bottom: 40px;
 }
 
+
 .my-container form {
     div {
         display: flex;
@@ -20,13 +21,14 @@
             border-radius: 5px;
             margin-bottom: 10px;
             background-color: $gold;
-            color: $blue;
+			color: $blue;
+			
+			&.ng-dirty.ng-invalid {
+				border-radius: 5px;
+				border: 2px solid red;
+				outline: none;
+			}
             
-            &:focus {
-                border-radius: 5px;
-                border: 2px solid red;
-                outline: none;
-            }
         }
         
         p {

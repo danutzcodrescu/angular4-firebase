@@ -1,6 +1,7 @@
-{"PAGES":{ 
-        "home": "home",
-        "result": "our-projects",
-        "contact": "contact-us"
-    }
+{
+	"MENU": {
+		"HOME": "home",
+		"RESULTS": "our Projects",
+		"CONTACT": "contact us"
+	}
 }
