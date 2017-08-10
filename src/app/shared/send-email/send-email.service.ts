@@ -6,8 +6,6 @@ export class SendEmailService {
 
 	private to = "danutzcodrescu@gmail.com";
 	private subject = 'Mesaj de pe site';
-	private MAILGUN_KEY = "key-049d8bfbaaf83f13ef74a61d8e2e7603";
-	private MAILGUN_DOMAIN = "sandboxd3ac8bab0104460ba996b8e1f08b09e9.mailgun.org";
 	private mailgun;
 
 	constructor() {
