@@ -9,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class RootComponent implements OnInit {
 
 	projects = [];
+	lang = "fr";
 	constructor(private projectsService: ProjectsService, public translate: TranslateService) { }
 
 	ngOnInit() {
 		this.projectsService.allProjects().subscribe(arr => {
 			this.projects = arr;
 		});
+		this.lang = this.translate.getLang();
 	}
 
 }

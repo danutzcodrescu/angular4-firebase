@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TranslateService {
 
-	private lang: String;
+	private lang: string;
 	public translation: Object;
 
 	constructor(private http: Http) { }
 
-	use(param: String): void {
+	use(param: string): void {
 		this.lang = param;
 		this.translation = require('../../../assets/i18n' + param + '.json');
 	}
@@ -22,6 +22,10 @@ export class TranslateService {
 			property = property ? property[keys[i]] : this.translation[keys[i]];
 		}
 		return property;
+	}
+
+	getLang(): string {
+		return this.lang;
 	}
 
 }
