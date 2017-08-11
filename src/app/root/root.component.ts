@@ -1,3 +1,4 @@
+import { TranslateService } from 'app/shared/translate/translate.service';
 import { ProjectsService } from './../shared/model/projects.service';
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RootComponent implements OnInit {
 
 	projects = [];
-	constructor(private projectsService: ProjectsService) { }
+	constructor(private projectsService: ProjectsService, public translate: TranslateService) { }
 
 	ngOnInit() {
 		this.projectsService.allProjects().subscribe(arr => {

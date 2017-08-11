@@ -31,7 +31,7 @@ import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ImgComponent } from './img/img.component';
 import { SliderProjectsComponent } from './slider-projects/slider-projects.component';
 import { TranslatePipe } from './shared/translate/translate.pipe';
-import { SentanceCasePipe } from './shared/sentance-case.pipe';
+import { SentanceCasePipe } from './shared/pipes/sentance-case.pipe';
 import { SkillsTabComponent } from './skills-tab/skills-tab.component';
 import { SkillsDisplayComponent } from './skills-display/skills-display.component';
 

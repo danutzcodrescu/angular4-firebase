@@ -45,23 +45,23 @@
 </div>
 
 <app-skills-tab>
-	<app-skills-display title="Why choose us?">
+	<app-skills-display [title]="translate.get('HOME.US')">
 		<p style="margin-top: 20px">
 			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
 		</p>
 	</app-skills-display>
-	<app-skills-display title="Our expertise?">
+	<app-skills-display [title]="translate.get('HOME.EXPERTISE')">
 		<p style="margin-top: 20px">
 			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
 		</p>
 	</app-skills-display>
-	<app-skills-display title="Our commitment?">
+	<app-skills-display [title]="translate.get('HOME.COMMIT')">
 		<p style="margin-top: 20px">
 			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
 		</p>
 	</app-skills-display>
 
-	<app-skills-display title="Our vision?">
+	<app-skills-display [title]="translate.get('HOME.VISION')">
 		<p style="margin-top: 20px">
 			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
 		</p>
@@ -74,7 +74,7 @@
 
 <div class="my-container extend" style="margin-top: 35px">
 		<div class="partners-parent">
-			<h4 class="h2 h3_partners text-center">Partners</h4>
+			<h4 class="h2 h3_partners text-center">{{'HOME.PARTNERS' | translate | sentanceCase}}</h4>
 		</div>
 		<div class="partners">
 			<img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_01.jpg" />

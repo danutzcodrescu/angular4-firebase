@@ -1,3 +1,4 @@
+import { TranslateService } from './../shared/translate/translate.service';
 import { Project } from './../shared/model/projects';
 import { Component, OnInit, Input } from '@angular/core';
 

@@ -1,8 +1,32 @@
 {
 	"MENU": {
 		"HOME": "accueuil",
-		"RESULTS": "notre projects",
+		"RESULTS": "notre projets",
 		"CONTACT": "contactez nous"
+	},
+
+	"HOME" : {
+		"QUOTE": "obtenir devis",
+		"US": "Porquoi choisir nous?",
+		"EXPERTISE": "Notre expertise?",
+		"COMMIT": "Notre engagement?",
+		"VISION": "Notre vision?",
+		"PARTNERS": "partenaires",
+		"PROJECTS": "Notre dernieres projets"
+	},
+
+	"PROJECT" : {
+		"DESCRIPTION" : "Description du projet",
+		"DETAILS" : "Details du projet",
+		"LOCATION": "Site",
+		"START":"Date de début",
+		"END":"fin"
+	},
+
+	"CONTACT": {
+		"HEAD": "siège social",
+		"FNAME": "Prénom",
+		"LNAME": "Nom"
 	}
 }
 

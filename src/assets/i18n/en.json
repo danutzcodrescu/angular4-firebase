@@ -3,5 +3,29 @@
 		"HOME": "home",
 		"RESULTS": "our Projects",
 		"CONTACT": "contact us"
+	},
+
+	"HOME" : {
+		"QUOTE": "get quote",
+		"US": "Why choose us?",
+		"EXPERTISE": "Our expertise",
+		"COMMIT": "Our commitment?",
+		"VISION": "Our vision?",
+		"PARTNERS": "partners",
+		"PROJECTS": "our latest projects"
+	},
+	
+	"PROJECT" : {
+		"DESCRIPTION" : "Project description",
+		"DETAILS" : "Project details",
+		"LOCATION": "Location",
+		"START":"Starting date",
+		"END":"Ending date"
+	},
+	
+	"CONTACT": {
+		"HEAD": "Headquarters",
+		"FNAME": "First name",
+		"LNAME": "Last name"
 	}
 }

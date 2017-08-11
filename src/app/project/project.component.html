@@ -6,14 +6,14 @@
 </div>
 <div class="my-container project-details">
 	<div>
-		<h4 class="h2">Project Description</h4>
+		<h4 class="h2">{{ 'PROJECT.DESCRIPTION' | translate | sentanceCase:"sentance" }}</h4>
 		<p><strong>Client:</strong> {{project.client}}</p>
-		<p><strong>Location:</strong> {{project.location}}</p>
-		<p><strong>Starting date:</strong> {{project.start}}</p>
-		<p><strong>Ending date:</strong> {{project.end}}}</p>
+		<p><strong>{{ 'PROJECT.LOCATION' | translate | sentanceCase }}:</strong> {{project.location}}</p>
+		<p><strong>{{ 'PROJECT.START' | translate | sentanceCase:"sentance" }}:</strong> {{project.start}}</p>
+		<p><strong>{{ 'PROJECT.END' | translate | sentanceCase:"sentance" }}:</strong> {{project.end}}</p>
 	</div>
 	<div>
-		<h4 class="h2">Project Details</h4>
+		<h4 class="h2">{{ 'PROJECT.DETAILS' | translate | sentanceCase:"sentance" }}</h4>
 		<p>{{project.details}}</p>
 	</div>
 
