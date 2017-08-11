@@ -48,12 +48,17 @@
             border: 2px solid $blue;
             border-radius: 5px;
             background-color: $gold;
-            color: $blue;
+			color: $blue;
+			cursor: pointer;
             
             &:hover {
                 background-color: red;
                 color: $gold;
-            }
+			}
+			
+			&:disabled {
+				cursor: not-allowed;
+			}
         }
         
         ::-webkit-input-placeholder { /* WebKit, Blink, Edge */

@@ -1,6 +1,7 @@
-import { FormGroup } from '@angular/forms';
+import { TranslateService } from 'app/shared/translate/translate.service';
 import { SendEmailService } from './../shared/send-email/send-email.service';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { NgForm } from "@angular/forms/src/forms";
 
 @Component({
 	selector: 'app-contact',
@@ -9,15 +10,19 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-	form: FormGroup;
-
-	constructor(private email: SendEmailService) { }
+	constructor(private email: SendEmailService, private translate: TranslateService) { }
 
 	ngOnInit() {
 	}
 
-	sendEmail(form) {
-		console.log(this.form);
+	sendEmail(form: NgForm) {
+		const obj = {
+			fname: form.value.fname,
+			lname: form.value.lname,
+			email: form.value.email,
+			mess: form.value.mess
+		}
+		form.resetForm();
 		// this.email.send(form).subscribe(result => {
 		// 	console.log(result);
 		// 	this.form.nativeElement.reset();

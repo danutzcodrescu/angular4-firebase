@@ -23,10 +23,10 @@
                 </a>
                 <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
             </div>
-            <form novalidate [formGroup]="form">
+            <form novalidate #formRef="ngForm" (ngSubmit)="sendEmail(formRef)">
                 <div>
-                    <input type='text' name='fname' placeholder="First Name *" ngModel />     
-                    <input type='text' name='lname' placeholder="Last Name" ngModel />
+                    <input type='text' name='fname' [placeholder]="translate.get('CONTACT.FNAME')" ngModel />     
+                    <input type='text' name='lname' [placeholder]="translate.get('CONTACT.LNAME')" ngModel />
                 </div>
                 <div >
                     <input type='email' name='email' placeholder="Email *" style="width: 100%" ngModel required />     
@@ -37,8 +37,8 @@
                     </textarea>
                 </div>
                 <div>
-                    <p>All fields with * are obligatory</p>
-                    <button type="submit">Send Message!</button>
+                    <p>{{ 'CONTACT.FORM' | translate | sentanceCase:"sentance" }}</p>
+                    <button type="submit" [disabled]="!formRef.valid">{{ 'CONTACT.BUTTON' | translate | sentanceCase:"sentance" }}!</button>
                 </div>
             </form>      
         </div>

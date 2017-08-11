@@ -26,6 +26,8 @@
 	"CONTACT": {
 		"HEAD": "Headquarters",
 		"FNAME": "First name",
-		"LNAME": "Last name"
+		"LNAME": "Last name",
+		"FORM": "All fields with * are mandatory",
+		"BUTTON": "Send message"
 	}
 }

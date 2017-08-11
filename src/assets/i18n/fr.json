@@ -26,7 +26,9 @@
 	"CONTACT": {
 		"HEAD": "siège social",
 		"FNAME": "Prénom",
-		"LNAME": "Nom"
+		"LNAME": "Nom",
+		"FORM": "Tous les champs avec * sont obligatoires",
+		"BUTTON": "Envoyer message"
 	}
 }
 
