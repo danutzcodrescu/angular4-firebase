@@ -31,7 +31,11 @@
             text-align: center;
             margin-bottom: 30px;
             padding: 20px 0;
-            cursor: pointer;
+			cursor: pointer;
+			&.selected {
+				background-color: $blue;
+				color: $gold;
+			}
         }
     }
     &.background-opacity {
@@ -199,10 +203,6 @@
             max-width: 200px;
             > div {
 				width: 100%;
-				&.selected {
-					background-color: $blue;
-					color: $gold;
-				}
 			}
         }
     }

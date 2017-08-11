@@ -10,7 +10,7 @@ import { NgForm } from "@angular/forms/src/forms";
 })
 export class ContactComponent implements OnInit {
 
-	constructor(private email: SendEmailService, private translate: TranslateService) { }
+	constructor(private email: SendEmailService, public translate: TranslateService) { }
 
 	ngOnInit() {
 	}

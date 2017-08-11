@@ -9,9 +9,9 @@ import { Router } from "@angular/router";
 	styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-	
-	private list: string;
-	private edit = false;
+
+	list: string;
+	edit = false;
 
 	constructor( private afAuth: AngularFireAuth, private router: Router) { }
 

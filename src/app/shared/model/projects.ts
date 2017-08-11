@@ -5,4 +5,5 @@ export interface Project {
 	location: String;
 	description: String;
 	files: Float32Array;
+	details: String;
 }

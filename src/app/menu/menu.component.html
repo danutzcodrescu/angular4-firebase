@@ -3,12 +3,12 @@
         <div class="logo">
            <img src="https://usatftw.files.wordpress.com/2015/09/9455_san_francisco_49ers-primary-2009.gif?w=1000" />
         </div>
-        <div class="menu-button" role="button">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        <div class="menu-button" role="button" (click)="toggleMenu()">
+          <span class="fa  fa-bars"></span>
           <span>Menu</span>
         </div>
         
-        <nav>
+        <nav [style.display]="toggled ? 'block' : 'none'">
             <ul>       
                 <li><a [routerLink]="['/' + lang]">{{'MENU.HOME' | translate | sentanceCase }}</a></li>
                 <li><a [routerLink]="['/' + lang + '/projects']">{{'MENU.RESULTS' | translate | sentanceCase }}</a></li>
@@ -16,11 +16,11 @@
             </ul>
         </nav>
         <a class="contact" href="tel:0032495304278">
-            <span class="glyphicon glyphicon-earphone"></span>
+            <span class="fa fa-phone"></span>
             <span>+32 495 304 278</span>
         </a>
         <a class="contact" href="mailto:manu.temeian@sef.com">
-            <span class="glyphicon glyphicon-envelope"></span>
+            <span class="fa fa-envelope-o"></span>
             <span>manu.temeian@sef.com</span>
         </a>
         

@@ -1,3 +1,7 @@
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/operator/throttle';
+import 'rxjs/add/observable/interval';
 import { Router, NavigationEnd } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from "app/shared/translate/translate.service";
@@ -10,6 +14,9 @@ import { TranslateService } from "app/shared/translate/translate.service";
 export class MenuComponent implements OnInit {
 
 	lang = <String>"fr";
+
+	toggled = false;
+	private clicked = false;
 
 	constructor(private router: Router, private translate: TranslateService) {}
 
@@ -25,6 +32,25 @@ export class MenuComponent implements OnInit {
 				}
 			}
 		});
+
+		const resize = Observable.fromEvent(window, 'resize');
+		const result = resize.throttle(ev => Observable.interval(200));
+		result.subscribe((event: any) => this.resizeWindow(event.target.innerWidth));
+	}
+
+	toggleMenu() {
+		this.toggled = !this.toggled;
+		this.clicked = !this.clicked;
+	}
+
+	resizeWindow(width: number) {
+		if (width >= 768 && !this.toggled) {
+			this.toggled = true;
+			this.clicked = false;
+		}
+		if (width < 768 && !this.clicked && this.toggled) {
+			this.toggled = false;
+		}
 	}
 
 }
