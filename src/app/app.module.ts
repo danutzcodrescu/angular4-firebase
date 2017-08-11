@@ -32,6 +32,8 @@ import { ImgComponent } from './img/img.component';
 import { SliderProjectsComponent } from './slider-projects/slider-projects.component';
 import { TranslatePipe } from './shared/translate/translate.pipe';
 import { SentanceCasePipe } from './shared/sentance-case.pipe';
+import { SkillsTabComponent } from './skills-tab/skills-tab.component';
+import { SkillsDisplayComponent } from './skills-display/skills-display.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { SentanceCasePipe } from './shared/sentance-case.pipe';
 		ImgComponent,
 		SliderProjectsComponent,
 		TranslatePipe,
-		SentanceCasePipe
+		SentanceCasePipe,
+		SkillsTabComponent,
+		SkillsDisplayComponent
 	],
 	imports: [
 		BrowserModule,

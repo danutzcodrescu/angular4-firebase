@@ -1,36 +1,29 @@
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-// const Mailgun = require('mailgun-js');
 
 @Injectable()
 export class SendEmailService {
 
 	private to = "danutzcodrescu@gmail.com";
 	private subject = 'Mesaj de pe site';
-	private MAILGUN_KEY = "key-049d8bfbaaf83f13ef74a61d8e2e7603";
-	private MAILGUN_DOMAIN = "sandboxd3ac8bab0104460ba996b8e1f08b09e9.mailgun.org";
-	private mailgun;
 
-	constructor() {
-		// this.mailgun = new Mailgun({apiKey: this.MAILGUN_KEY, domain: this.MAILGUN_DOMAIN});
-	}
+	constructor(private http: Http) {}
 
-	send(data): void {
-		const content = {
-			from: data.email,
+	send(data) {
+		const body = {
 			to: this.to,
-			subject: this.subject,
-			html: `<p>Nume: ${data.fname} ${data.lname}</p>
-			<p>Email: ${data.email}</p>
-			<p>Mesaj:${data.mess}</p>`
-		}
-
-		this.mailgun.messages().send(content, function (err, body) {
-			if (err) {
-				console.log("got an error: ", err);
-			} else {
-				console.log(body);
-			}
-		});
+			from: data.email,
+			subject: data.subject,
+			html: `<p>Salut Manu,</p>
+				<p>Ai un nou mesaj de pe site:</p>
+				<ul>
+					<li>Nume: ${data.fname} ${data.lname}</li>
+					<li>Email: ${data.email}</li>
+					<li>Mesaj: ${data.mess}</li>
+				</ul>
+			`
+		};
+		// this.http.post(`https://api.mailgun.net/v3/${this.MAILGUN_DOMAIN}/messages`, body, options)
 	}
 
 }

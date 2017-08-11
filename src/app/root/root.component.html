@@ -43,54 +43,32 @@
 			Aenean lacinia bibendum nulla sed consectetur.</p>
 	</div>
 </div>
-<div class="my-container centered" style="margin-top: 35px">
-	<div class="buttons">
-		<div class="skills" id="1" style="background-color: #1b273d; color:#ffb600;">Why choose us?</div>
-		<div class="skills" id="2">Our expertise?</div>
-		<div class="skills" id="3">Our commitment?</div>
-		<div class="skills" id="4">Our vision?</div>
-	</div>
-	<div class="skills-text">
-		<div class="shows" id="skill_1">
-			<h4 class="h2 h3_under text-center">Why choose us?</h4>
-			<p style="margin-top: 20px">Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-				dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-				Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
-				ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper
-				nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-				sed diam eget risus varius blandit sit amet non magna. Integer posu.</p>
-		</div>
-		<div class="shows" id="skill_2" style="display: none">
-			<h4 class="h2 h3_under text-center">Our expertise?</h4>
-			<p style="margin-top: 20px">Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-				dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-				Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
-				ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper
-				nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-				sed diam eget risus varius blandit sit amet non magna. Integer posu.</p>
-		</div>
-		<div class="shows" id="skill_3" style="display: none">
-			<h4 class="h2 h3_under text-center">Our commitment?</h4>
-			<p style="margin-top: 20px">Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-				dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-				Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
-				ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper
-				nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-				sed diam eget risus varius blandit sit amet non magna. Integer posu.</p>
-		</div>
-		<div class="shows" id="skill_4" style="display: none">
-			<h4 class="h2 h3_under text-center">Our vision?</h4>
-			<p style="margin-top: 20px">Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-				dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-				Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
-				ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper
-				nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-				sed diam eget risus varius blandit sit amet non magna. Integer posu.</p>
-		</div>
-	</div>
-</div>
 
- <div *ngIf="projects.length>0">
+<app-skills-tab>
+	<app-skills-display title="Why choose us?">
+		<p style="margin-top: 20px">
+			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
+		</p>
+	</app-skills-display>
+	<app-skills-display title="Our expertise?">
+		<p style="margin-top: 20px">
+			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
+		</p>
+	</app-skills-display>
+	<app-skills-display title="Our commitment?">
+		<p style="margin-top: 20px">
+			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
+		</p>
+	</app-skills-display>
+
+	<app-skills-display title="Our vision?">
+		<p style="margin-top: 20px">
+			Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posu.
+		</p>
+	</app-skills-display>
+</app-skills-tab>
+
+<div *ngIf="projects.length>0">
 	<app-slider-projects [projects]="projects"></app-slider-projects>
 </div>	 
 

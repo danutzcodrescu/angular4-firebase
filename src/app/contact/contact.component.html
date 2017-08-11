@@ -23,7 +23,7 @@
                 </a>
                 <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
             </div>
-            <form novalidate #form="ngForm" (ngSubmit)="sendEmail(form.value)">
+            <form novalidate [formGroup]="form">
                 <div>
                     <input type='text' name='fname' placeholder="First Name *" ngModel />     
                     <input type='text' name='lname' placeholder="Last Name" ngModel />
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <p>All fields with * are obligatory</p>
-                    <button type="submit" [disabled]="!form.valid">Send Message!</button>
+                    <button type="submit">Send Message!</button>
                 </div>
             </form>      
         </div>

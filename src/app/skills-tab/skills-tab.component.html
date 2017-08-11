@@ -1,0 +1,8 @@
+<div class="my-container centered" style="margin-top: 35px">
+	<div class="buttons">
+		<div class="skills" *ngFor="let tab of tabs" [ngClass]="{selected: tab.selected}" (click)="selectedTab(tab.title)">{{tab.title}}</div>
+	</div>
+	<div class="skills-text">
+		<ng-content></ng-content>
+	</div>
+</div>
