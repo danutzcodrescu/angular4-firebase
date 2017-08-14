@@ -26,7 +26,11 @@ footer {
             justify-content: center;
             span {
                 margin-top: 18.5px;
-            }
+			}
+			
+			span:last-of-type {
+				margin-left: 10px;
+			}
         }
         
         a:hover {

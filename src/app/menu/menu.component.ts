@@ -13,7 +13,7 @@ import { TranslateService } from "app/shared/translate/translate.service";
 })
 export class MenuComponent implements OnInit {
 
-	lang = <String>"fr";
+	lang = "fr";
 
 	toggled = false;
 	private clicked = false;
@@ -36,6 +36,7 @@ export class MenuComponent implements OnInit {
 		const resize = Observable.fromEvent(window, 'resize');
 		const result = resize.throttle(ev => Observable.interval(200));
 		result.subscribe((event: any) => this.resizeWindow(event.target.innerWidth));
+		this.resizeWindow(window.innerWidth);
 	}
 
 	toggleMenu() {
