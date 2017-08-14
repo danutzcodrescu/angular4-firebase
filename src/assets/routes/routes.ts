@@ -5,6 +5,7 @@ import { HomeComponent } from './../../app/home/home.component';
 import { ContactComponent } from "app/contact/contact.component";
 import { AdminComponent } from "app/admin/admin.component";
 import { LoginComponent } from "app/login/login.component";
+import { AuthGuard } from "app/shared/auth/loginGuard";
 
 export const routerConfig = [
 	{
@@ -19,7 +20,8 @@ export const routerConfig = [
 
 	{
 		path: 'admin',
-		component: AdminComponent
+		component: AdminComponent,
+		canActivate: [AuthGuard]
 	},
 
 	{

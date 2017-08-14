@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-	public form:FormGroup;
+	public form: FormGroup;
 
 	constructor(private fb: FormBuilder, private adminService: AdminService, private router: Router) {
 		this.form = this.fb.group({

@@ -34,6 +34,7 @@ import { TranslatePipe } from './shared/translate/translate.pipe';
 import { SentanceCasePipe } from './shared/pipes/sentance-case.pipe';
 import { SkillsTabComponent } from './skills-tab/skills-tab.component';
 import { SkillsDisplayComponent } from './skills-display/skills-display.component';
+import { AuthGuard } from "app/shared/auth/loginGuard";
 
 
 @NgModule({
@@ -69,7 +70,7 @@ import { SkillsDisplayComponent } from './skills-display/skills-display.componen
 		AngularFireDatabaseModule,
 		AngularFireAuthModule
 	],
-	providers: [ProjectsService, AdminService, TranslateService, SendEmailService],
+	providers: [ProjectsService, AdminService, TranslateService, SendEmailService, AuthGuard],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

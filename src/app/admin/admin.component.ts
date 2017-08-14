@@ -1,7 +1,7 @@
 import { ProjectsService } from './../shared/model/projects.service';
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from "@angular/router";
+import { AdminService } from "app/shared/auth/admin.service";
 
 @Component({
 	selector: 'app-admin',
@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
 	list: string;
 	edit = false;
 
-	constructor( private afAuth: AngularFireAuth, private router: Router) { }
+	constructor( private adminService: AdminService, private router: Router) { }
 
 	ngOnInit() {
 	}
@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
 	}
 
 	logout() {
-		this.afAuth.auth.signOut();
+		this.adminService.logout();
 		this.router.navigate(['/login']);
 	}
 
