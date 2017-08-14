@@ -2,23 +2,27 @@
 @import '../root/root.component.scss';
 
 .my-container.background-opacity.projects-background {
-    height: 250px;
+	height: 90px;
+	background-color: $gold;
     margin-top: 0;
     > div {
         height: 100%;
         display: flex;
-        align-items: center;
+		align-items: center;
+		position: relative;
         h4 {
             width: 100%;
-            text-shadow: 2px 3px 5px rgba(255, 182, 0, 0.9);
-            border-bottom: 0;
+            // text-shadow: 2px 3px 5px rgba(57, 2, 3, 0.90);
+			border-bottom: 0;
+			font-size: 2.3em;
+			text-align: center;
         }
     }
 }
 
 .my-container.projects {
     > a {
-        border: 4.5px solid $gold;
+        border: 4.5px solid $blue;
         box-shadow: inset -4px -1px 41px 1px #a1a2ad;
         padding: 10px;
         margin-bottom: 15px;
@@ -125,7 +129,7 @@
         padding: 0;
     }
     .my-container.background-opacity.projects-background {
-        height: 320px;
+        height: 120px;
     }
     
     .my-container.projects {
@@ -179,7 +183,12 @@
 
 @media screen and (min-width:1200px) {
     .my-container.background-opacity.projects-background {
-        height: 360px;
+		height: 160px;
+		> div {
+			h4 {
+				margin-bottom: 0;
+			}
+		}
 	}
 	
 	.my-container.project-details {

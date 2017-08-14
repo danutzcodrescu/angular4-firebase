@@ -1,21 +1,11 @@
-<!--<form autocomplete="off" novalidate (submit)="upload($event)">
-    <fieldset>
-        <legend>Incarca imagine</legend>
-        <div class="form-field">
-            <label>Selecteaza imagine</label>
-            <input type="file" id="file">
-        </div>
-    </fieldset>
-
-    <button type="submit">Upload</button>
-</form>-->
 <nav>
-	<ul>
-		<li (click)="clicked('list', 'page')">Pagini</li>
+	<ul class="menu simple">
+		<!-- <li (click)="clicked('list', 'page')">Pagini</li> -->
 		<li (click)="clicked('list', 'project')">Proiecte</li>
 		<li (click)="logout()">Logout</li>
 	</ul>
-	<app-all-projects *ngIf="!edit && list=='project'" (project)="projects($event)"></app-all-projects>
-	<app-new-project *ngIf="edit && list=='project'"></app-new-project>
-	<app-edit-project *ngIf="edit && list.indexOf('project')>-1 && list.length>7" [id]="list.slice(list.indexOf('*')+1)"></app-edit-project>
 </nav>
+
+<app-all-projects *ngIf="!edit && list=='project'" (project)="projects($event)"></app-all-projects>
+<app-new-project *ngIf="edit && list=='project'"></app-new-project>
+<app-edit-project *ngIf="edit && list.indexOf('project')>-1 && list.length>7" [id]="list.slice(list.indexOf('*')+1)"></app-edit-project>

@@ -1,32 +1,35 @@
 <form autocomplete="off" novalidate [formGroup]="form" (submit)="createProject($event)">
-    <fieldset>
-        <legend>Proiect nou</legend>
-        <div class="form-field">
-            <label for="client">Client</label>
-            <input type="text" name="client" formControlName="client">
-        </div>
-        <div class="form-field">
-            <label for="location">Locatie</label>
-            <input type="text" name="location" formControlName="location">
-        </div>
-		<div class="form-field">
-            <label for="start">Data de incepere</label>
-            <input type="date" name="start" formControlName="start">
-        </div>
-		<div class="form-field">
-            <label for="end">Data de incheiere</label>
-            <input type="date" name="end" formControlName="end">
-        </div>
-		<div class="form-field">
-            <label for="description">Descriere</label>
-            <textarea name="description" formControlName="description"></textarea>
-        </div>
-		<legend>Incarca imagine</legend>
-        <div class="form-field">
-            <label>Selecteaza imagine</label>
-            <input type="file" name='files' multiple>
-        </div>
-    </fieldset>
+	<div class="row">
 
-    <button type="submit">Creeaza proiect nou</button>
+		<fieldset class="small-6 large-4 columns end">
+			<legend>Proiect nou</legend>
+			<div class="form-field">
+				<label for="client">Client</label>
+				<input type="text" name="client" formControlName="client">
+			</div>
+			<div class="form-field">
+				<label for="location">Locatie</label>
+				<input type="text" name="location" formControlName="location">
+			</div>
+			<div class="form-field">
+				<label for="start">Data de incepere</label>
+				<input type="date" name="start" formControlName="start">
+			</div>
+			<div class="form-field">
+				<label for="end">Data de incheiere</label>
+				<input type="date" name="end" formControlName="end">
+			</div>
+			<div class="form-field">
+				<label for="description">Descriere</label>
+				<textarea name="description" formControlName="description"></textarea>
+			</div>
+			<legend>Incarca imagine</legend>
+			<div class="form-field">\
+				<label>Selecteaza imagine</label>
+				<input type="file" name='files' multiple>
+			</div>
+		</fieldset>
+	</div>
+
+    <button type="submit" class="button">Creeaza proiect nou</button>
 </form>

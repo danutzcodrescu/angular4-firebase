@@ -10,7 +10,7 @@ import { AdminService } from "app/shared/auth/admin.service";
 })
 export class AdminComponent implements OnInit {
 
-	list: string;
+	list = "project";
 	edit = false;
 
 	constructor( private adminService: AdminService, private router: Router) { }
