@@ -1,44 +1,45 @@
 <div class="my-container" style="margin-top: 30px; margin-bottom: 30px;">
-            <div class="about text-center h2">
-                 <h3 class="h2 h3_under">{{ 'MENU.CONTACT' | translate | sentanceCase }}</h3> 
-            </div>
-        </div>
-     
-        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1501993708443!2d-77.0387184844226!3d38.897680454532136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sThe+White+House!5e0!3m2!1sen!2sbe!4v1473417480097" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-       
-        <div class="my-container grouped-form">
-            <div class="contact-box">
-                <h4 class="h2">{{ 'CONTACT.HEAD' | translate | sentanceCase:"sentance" }}</h4>
-                <a href="#map">
+	<div class="about text-center h2">
+		<h3 class="h2 h3_under">{{ 'MENU.CONTACT' | translate | sentanceCase }}</h3>
+	</div>
+</div>
+
+<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1501993708443!2d-77.0387184844226!3d38.897680454532136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sThe+White+House!5e0!3m2!1sen!2sbe!4v1473417480097"
+ width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<div class="my-container grouped-form">
+	<div class="contact-box">
+		<h4 class="h2">{{ 'CONTACT.HEAD' | translate | sentanceCase:"sentance" }}</h4>
+		<a href="#map">
                     <span class="fa fa-map-marker"></span>
                     <span>Brussels, Belgium</span>
                 </a>
-                <a href="tel:0032495304278">
+		<a href="tel:0032495304278">
                     <span class="fa fa-phone"></span>
                     <span>+32 495 304 278</span>
                 </a>
-                <a href="mailto:manu.temeian@sef.com">
+		<a href="mailto:manu.temeian@sef.com">
                     <span class="fa fa-envelope-o"></span>
                     <span>manu.temeian@sef.com</span>
                 </a>
-                <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
-            </div>
-            <form novalidate #formRef="ngForm" (ngSubmit)="sendEmail(formRef)">
-                <div>
-                    <input type='text' name='fname' [placeholder]="translate.get('CONTACT.FNAME')" ngModel />     
-                    <input type='text' name='lname' [placeholder]="translate.get('CONTACT.LNAME')" ngModel />
-                </div>
-                <div >
-                    <input type='email' name='email' placeholder="Email *" style="width: 100%" ngModel required />     
-                </div>
-                <div>
-                    <textarea name='mess' rows='10' cols='10' placeholder="Message *" required ngModel>
+		<a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+	</div>
+	<form novalidate #formRef="ngForm" (ngSubmit)="sendEmail(formRef)">
+		<div>
+			<input type='text' name='fname' [placeholder]="translate.get('CONTACT.FNAME')" ngModel />
+			<input type='text' name='lname' [placeholder]="translate.get('CONTACT.LNAME')" ngModel />
+		</div>
+		<div>
+			<input type='email' name='email' placeholder="Email *" style="width: 100%" ngModel required />
+		</div>
+		<div>
+			<textarea name='mess' rows='10' cols='10' placeholder="Message *" required ngModel>
                     
                     </textarea>
-                </div>
-                <div>
-                    <p>{{ 'CONTACT.FORM' | translate | sentanceCase:"sentance" }}</p>
-                    <button type="submit" [disabled]="!formRef.valid">{{ 'CONTACT.BUTTON' | translate | sentanceCase:"sentance" }}!</button>
-                </div>
-            </form>      
-        </div>
+		</div>
+		<div>
+			<p>{{ 'CONTACT.FORM' | translate | sentanceCase:"sentance" }}</p>
+			<button type="submit" [disabled]="!formRef.valid">{{ 'CONTACT.BUTTON' | translate | sentanceCase:"sentance" }}!</button>
+		</div>
+	</form>
+</div>

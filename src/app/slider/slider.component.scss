@@ -126,7 +126,7 @@
         box-sizing: border-box;
         padding: 20px 15px;
         border: 2px solid $gold;
-        box-shadow: inset -4px -1px 41px 1px #a1a2ad;
+        // box-shadow: inset -4px -1px 41px 1px #a1a2ad;
         display: flex;
         justify-content: space-around;
         > * {
@@ -134,7 +134,7 @@
         }
         
         > *:hover {
-            color: red;
+            color: goldenrod;
         }
         
     }

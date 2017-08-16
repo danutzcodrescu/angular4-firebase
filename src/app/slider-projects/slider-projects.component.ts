@@ -22,7 +22,7 @@ export class SliderProjectsComponent implements OnInit {
 	}
 
 	next() {
-		if (this.index >= this.projects.length) { return}
+		if (this.index >= this.projects.length || !this.projects[this.index + 4]) return;
 		this.index += 4;
 		this.recalculate();
 	}
