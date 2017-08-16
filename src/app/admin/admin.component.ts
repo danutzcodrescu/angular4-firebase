@@ -6,7 +6,7 @@ import { AdminService } from "app/shared/auth/admin.service";
 @Component({
 	selector: 'app-admin',
 	templateUrl: './admin.component.html',
-	styleUrls: ['./admin.component.scss']
+	styleUrls: ['../login/login.component.scss']
 })
 export class AdminComponent implements OnInit {
 
@@ -18,7 +18,8 @@ export class AdminComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	clicked(type: string, param: string) {
+	clicked(type: string, param: string, event) {
+		event.preventDefault();
 		if (type === "edit" && this.edit === false) {
 			this.edit = true;
 		}
@@ -28,7 +29,8 @@ export class AdminComponent implements OnInit {
 		this.list = param;
 	}
 
-	logout() {
+	logout(event) {
+		event.preventDefault();
 		this.adminService.logout();
 		this.router.navigate(['/login']);
 	}

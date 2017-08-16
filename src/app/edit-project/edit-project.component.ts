@@ -7,7 +7,7 @@ import { FirebaseApp } from 'angularfire2';
 @Component({
 	selector: 'app-edit-project',
 	templateUrl: './edit-project.component.html',
-	styleUrls: ['./edit-project.component.scss'],
+	styleUrls: ['../login/login.component.scss'],
 	providers: [ProjectsService]
 })
 export class EditProjectComponent implements OnInit {
@@ -26,6 +26,7 @@ export class EditProjectComponent implements OnInit {
 			start: ['elem.start', Validators.required],
 			end: ['elem.end'],
 			description: ['elem.description'],
+			details: ['elem.details'],
 			files: ['']
 		});
 	}
@@ -39,6 +40,7 @@ export class EditProjectComponent implements OnInit {
 				start: [elem.start],
 				end: [elem.end],
 				description: [elem.description],
+				details: [elem.details],
 				files: ['']
 			});
 		});
@@ -64,6 +66,7 @@ export class EditProjectComponent implements OnInit {
 		obj.start = formValue.start;
 		obj.end = formValue.end;
 		obj.description = formValue.description;
+		obj.details = formValue.details;
 		const promises = [];
 		const files = event.target.files.files;
 		for (let i = 0; i < files.length; i++) {

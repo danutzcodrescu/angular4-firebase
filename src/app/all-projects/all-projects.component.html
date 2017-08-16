@@ -1,6 +1,10 @@
-<ul>
-    <li *ngFor="let project of projects | async ">
-		<div>{{project.client}} <button (click)='clicked(project.$key)' class="button info">Edit</button></div>
+<ul class="pure-g">
+    <li *ngFor="let project of projects | async " class="pure-u-3-5">
+		<span class="pure-u-2-5">{{project.client}}</span>
+		<button (click)='clicked(project.$key)' class="button-secondary pure-button">Edit</button>
     </li>
 </ul>
-<button (click)="clicked('new')" class="button">Creeaza proiect nou</button>
+
+<div class="pure-g">
+	<button (click)="clicked('new')" class="button-success pure-button">Creeaza proiect nou</button>
+</div>

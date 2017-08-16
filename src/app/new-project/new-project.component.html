@@ -1,35 +1,53 @@
-<form autocomplete="off" novalidate [formGroup]="form" (submit)="createProject($event)">
-	<div class="row">
+<form autocomplete="off" novalidate [formGroup]="form" (submit)="createProject($event)" class="pure-form pure-form-stacked">
 
-		<fieldset class="small-6 large-4 columns end">
-			<legend>Proiect nou</legend>
-			<div class="form-field">
+	<fieldset>
+		<legend>Proiect nou</legend>
+		<div class="pure-g">
+			<div class="pure-u-5-5">
 				<label for="client">Client</label>
-				<input type="text" name="client" formControlName="client">
+				<input type="text" name="client" formControlName="client" class="pure-u-3-5">
 			</div>
-			<div class="form-field">
+		</div>
+		<div class="pure-g">	
+			<div class="pure-u-5-5">
 				<label for="location">Locatie</label>
-				<input type="text" name="location" formControlName="location">
+				<input type="text" name="location" formControlName="location" class="pure-u-3-5">
 			</div>
-			<div class="form-field">
+		</div>
+		<div class="pure-g">	
+			<div class="pure-u-5-5">
 				<label for="start">Data de incepere</label>
-				<input type="date" name="start" formControlName="start">
+				<input type="date" name="start" formControlName="start" class="pure-u-3-5">
 			</div>
-			<div class="form-field">
+		</div>
+		<div class="pure-g">	
+			<div class="pure-u-5-5">
 				<label for="end">Data de incheiere</label>
-				<input type="date" name="end" formControlName="end">
+				<input type="date" name="end" formControlName="end" class="pure-u-3-5">
 			</div>
-			<div class="form-field">
+		</div>
+		<div class="pure-g">	
+			<div class="pure-u-5-5">
 				<label for="description">Descriere</label>
-				<textarea name="description" formControlName="description"></textarea>
+				<textarea name="description" formControlName="description" class="pure-u-3-5"></textarea>
 			</div>
-			<legend>Incarca imagine</legend>
-			<div class="form-field">\
+		</div>
+		<div class="pure-g">	
+			<div class="pure-u-5-5">
+					<label for="details">Detalii</label>
+					<textarea name="details" formControlName="details" class="pure-u-3-5"></textarea>
+			</div>
+		</div>
+		<div class="pure-g">	
+			<div class="pure-u-5-5">
 				<label>Selecteaza imagine</label>
 				<input type="file" name='files' multiple>
 			</div>
-		</fieldset>
+		</div>	
+	</fieldset>
+	<div class="pure-g">
+		<div class="pure-u-1-4"></div>
+		<button type="submit" class="button-success pure-button">Creeaza proiect nou</button>
 	</div>
 
-    <button type="submit" class="button">Creeaza proiect nou</button>
 </form>

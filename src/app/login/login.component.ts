@@ -20,11 +20,13 @@ export class LoginComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		const foundation = document.createElement('link');
-		foundation.type = 'text/css';
-		foundation.rel = 'stylesheet';
-		foundation.href = "http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css";
-		document.querySelector('head').appendChild(foundation);
+		// const pure = document.createElement('link');
+		// pure.type = 'text/css';
+		// pure.rel = 'stylesheet';
+		// pure.href = "https://unpkg.com/purecss@1.0.0/build/pure-min.css";
+		// pure.integrity = "sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w";
+		// // pure.crossorigin = "anonymous";
+		// document.querySelector('head').appendChild(pure);
 	}
 
 	login() {

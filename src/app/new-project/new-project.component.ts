@@ -7,7 +7,7 @@ import { FirebaseApp } from 'angularfire2';
 @Component({
 	selector: 'app-new-project',
 	templateUrl: './new-project.component.html',
-	styleUrls: ['./new-project.component.scss'],
+	styleUrls: ['../login/login.component.scss'],
 	providers: [ProjectsService]
 })
 export class NewProjectComponent implements OnInit {
@@ -23,6 +23,7 @@ export class NewProjectComponent implements OnInit {
 			start: ['', Validators.required],
 			end: [''],
 			description: [''],
+			details: [''],
 			files: ['']
 		});
 	}
@@ -39,6 +40,7 @@ export class NewProjectComponent implements OnInit {
 		obj.start = formValue.start;
 		obj.end = formValue.end;
 		obj.description = formValue.description;
+		obj.details = formValue.details;
 		obj.files = [];
 		const projects = this.projects.allProjects();
 		const promises = [];
