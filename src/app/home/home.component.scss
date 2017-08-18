@@ -37,8 +37,11 @@
         }
         
         li:hover {
-            background-color: red;
-            box-shadow: 17px 19px 29px 2px rgba(97,95,97,1);
+            background-color: $gold;
+			box-shadow: 17px 19px 29px 2px rgba(97,95,97,1);
+			a {
+				color: $blue;
+			}
         }
         
     }

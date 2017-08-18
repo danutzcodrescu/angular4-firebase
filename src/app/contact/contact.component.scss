@@ -17,11 +17,11 @@
             width: 100%;
             padding: 10px;
             font-size: 18px;
-            border: 2px solid $blue;
+            border: 2px solid $gold;
             border-radius: 5px;
             margin-bottom: 10px;
-            background-color: $gold;
-			color: $blue;
+            background-color: $blue;
+			color: $gold;
 			
 			&.ng-dirty.ng-invalid {
 				border-radius: 5px;
@@ -45,15 +45,15 @@
             border: 0;
             padding: 15px;
             font-size: 18px;
-            border: 2px solid $blue;
+            border: 2px solid $gold;
             border-radius: 5px;
-            background-color: $gold;
-			color: $blue;
+            background-color: $blue;
+			color: $gold;
 			cursor: pointer;
             
             &:hover {
-                background-color: red;
-                color: $gold;
+                background-color: $gold;
+                color: $blue;
 			}
 			
 			&:disabled {

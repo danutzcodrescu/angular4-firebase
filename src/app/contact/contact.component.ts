@@ -23,12 +23,12 @@ export class ContactComponent implements OnInit {
 			mess: form.value.mess
 		}
 		form.resetForm();
-		// this.email.send(form).subscribe(result => {
-		// 	console.log(result);
-		// 	this.form.nativeElement.reset();
-		// }, error => {
-		// 	console.log(error);
-		// });
+		this.email.send(obj).subscribe(result => {
+			console.log(result);
+			form.reset();
+		}, error => {
+			console.log(error);
+		});
 	}
 
 }
