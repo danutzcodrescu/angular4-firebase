@@ -1,8 +1,18 @@
 const express = require('express');
 const app = express();
 const Mailgun = require('mailgun-js');
+var bodyParser = require('body-parser');
+ // var winston = require('winston');
 
-app.get('/', function (req, res) {
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.post('/', function (req, res) {
 	const mailgun = new Mailgun({apiKey: process.env.key, domain: process.env.domain});
 	const data = {
 		from: req.body.email,
@@ -20,13 +30,12 @@ app.get('/', function (req, res) {
 
 	mailgun.messages().send(data, function (err, body) {
 		if (err) {
-			res.status(500);
-			res.json("got an error: ", err);
+			console.log(err)
+			res.status(500).json("got an error: ", err, body);
 		} else {
 			res.status(200).json(body);
 		}
 	});
-	
 })
 
 app.listen(3000, function () {
