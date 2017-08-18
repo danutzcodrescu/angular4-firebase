@@ -10,7 +10,7 @@ export class SendEmailService {
 	constructor(private http: Http) {}
 
 	send(data) {
-		return this.http.post('https://email-xbqvwfqvcl.now.sh/', data);
+		return this.http.post('https://email-scsgabtdfi.now.sh', data);
 	}
 
 }
